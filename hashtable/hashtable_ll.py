@@ -164,9 +164,7 @@ class HashTable:
         Implement this.
         """
         self.load += 1
-        # check load factor
         if self.get_load_factor() > 0.7:
-            # if above 0.7, resize to double capacity
             self.resize(self.capacity * 2)
 
         index_item = self.hash_index(key)
